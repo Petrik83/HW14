@@ -7,7 +7,7 @@
 
 import UIKit
 
-var settingModel = Section.getData()
+//var settingModel = Section.getData()
 
 struct Section {
     let title: String
