@@ -20,6 +20,9 @@
 		6D6E20F9279B46950067DC2F /* SetupViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6E20F8279B46950067DC2F /* SetupViewControllerDataSource.swift */; };
 		6D6E20FB279B49270067DC2F /* SetCellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6E20FA279B49270067DC2F /* SetCellStyle.swift */; };
 		6D6E20FD279B4CF70067DC2F /* etupViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6E20FC279B4CF70067DC2F /* etupViewControllerDelegate.swift */; };
+		6D6E2104279BD13C0067DC2F /* WiFiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6E2103279BD13C0067DC2F /* WiFiView.swift */; };
+		6D6E2106279BD14C0067DC2F /* WiFiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6E2105279BD14C0067DC2F /* WiFiModel.swift */; };
+		6D6E2108279BD17B0067DC2F /* WiFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6E2107279BD17B0067DC2F /* WiFiViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		6D6E20F8279B46950067DC2F /* SetupViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewControllerDataSource.swift; sourceTree = "<group>"; };
 		6D6E20FA279B49270067DC2F /* SetCellStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCellStyle.swift; sourceTree = "<group>"; };
 		6D6E20FC279B4CF70067DC2F /* etupViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etupViewControllerDelegate.swift; sourceTree = "<group>"; };
+		6D6E2103279BD13C0067DC2F /* WiFiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiView.swift; sourceTree = "<group>"; };
+		6D6E2105279BD14C0067DC2F /* WiFiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiModel.swift; sourceTree = "<group>"; };
+		6D6E2107279BD17B0067DC2F /* WiFiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,9 +98,8 @@
 			children = (
 				6D6E20F5279B45670067DC2F /* Extension */,
 				6D6E20E8279B1A5A0067DC2F /* App */,
-				6D6E20E9279B1A700067DC2F /* Controller */,
-				6D6E20EB279B1A8D0067DC2F /* View */,
-				6D6E20EA279B1A810067DC2F /* Model */,
+				6D6E20FE279B50210067DC2F /* SetupView */,
+				6D6E20FF279B50490067DC2F /* WiFiView */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -142,6 +147,50 @@
 				6D6E20FA279B49270067DC2F /* SetCellStyle.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		6D6E20FE279B50210067DC2F /* SetupView */ = {
+			isa = PBXGroup;
+			children = (
+				6D6E20E9279B1A700067DC2F /* Controller */,
+				6D6E20EB279B1A8D0067DC2F /* View */,
+				6D6E20EA279B1A810067DC2F /* Model */,
+			);
+			path = SetupView;
+			sourceTree = "<group>";
+		};
+		6D6E20FF279B50490067DC2F /* WiFiView */ = {
+			isa = PBXGroup;
+			children = (
+				6D6E2102279B50B90067DC2F /* Controller */,
+				6D6E2101279B50B00067DC2F /* View */,
+				6D6E2100279B50990067DC2F /* Model */,
+			);
+			path = WiFiView;
+			sourceTree = "<group>";
+		};
+		6D6E2100279B50990067DC2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6D6E2105279BD14C0067DC2F /* WiFiModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6D6E2101279B50B00067DC2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D6E2103279BD13C0067DC2F /* WiFiView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6D6E2102279B50B90067DC2F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6D6E2107279BD17B0067DC2F /* WiFiViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,10 +265,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D6E20F1279B1B770067DC2F /* SettingCellModel.swift in Sources */,
+				6D6E2108279BD17B0067DC2F /* WiFiViewController.swift in Sources */,
 				6D6E20F9279B46950067DC2F /* SetupViewControllerDataSource.swift in Sources */,
 				6D6E20FB279B49270067DC2F /* SetCellStyle.swift in Sources */,
+				6D6E2104279BD13C0067DC2F /* WiFiView.swift in Sources */,
 				39B6A728279AF3F600F0DFE2 /* SetupViewController.swift in Sources */,
 				6D6E20F7279B457C0067DC2F /* SearchExtension.swift in Sources */,
+				6D6E2106279BD14C0067DC2F /* WiFiModel.swift in Sources */,
 				39B6A724279AF3F600F0DFE2 /* AppDelegate.swift in Sources */,
 				6D6E20ED279B1AFA0067DC2F /* SetupView.swift in Sources */,
 				6D6E20EF279B1B2D0067DC2F /* CellModel.swift in Sources */,
