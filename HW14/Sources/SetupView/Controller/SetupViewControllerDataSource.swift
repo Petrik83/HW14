@@ -9,11 +9,11 @@ import UIKit
 extension SetupViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return setupModel.count
+        return SetupViewController.setupModel.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return setupModel[section].options.count
+        return SetupViewController.setupModel[section].options.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -24,9 +24,9 @@ extension SetupViewController: UITableViewDataSource {
             cell = UITableViewCell(style: .default, reuseIdentifier: SetupView.idCell)
         }
         
-        cell = setCellStyle(style: setupModel[indexPath.section].options[indexPath.row].style)
+        cell = setCellStyle(style: SetupViewController.setupModel[indexPath.section].options[indexPath.row].style)
         
-        switch setupModel[indexPath.section].options[indexPath.row].type {
+        switch SetupViewController.setupModel[indexPath.section].options[indexPath.row].type {
         case .none:
             cell?.accessoryType = .none
         case .disclosureIndicator:
@@ -41,9 +41,9 @@ extension SetupViewController: UITableViewDataSource {
             cell?.accessoryType = .detailButton
         }
         
-        cell?.imageView?.image = setupModel[indexPath.section].options[indexPath.row].icon
-        cell?.textLabel?.text = setupModel[indexPath.section].options[indexPath.row].title
-        cell?.detailTextLabel?.text = setupModel[indexPath.section].options[indexPath.row].detailTextLabel
+        cell?.imageView?.image = SetupViewController.setupModel[indexPath.section].options[indexPath.row].icon
+        cell?.textLabel?.text = SetupViewController.setupModel[indexPath.section].options[indexPath.row].title
+        cell?.detailTextLabel?.text = SetupViewController.setupModel[indexPath.section].options[indexPath.row].detailTextLabel
         return cell ?? UITableViewCell()
     }
     
@@ -57,11 +57,11 @@ extension SetupViewController: UITableViewDataSource {
             setupView?.tableView.cellForRow(at: IndexPath(row: 5, section: 1))?.detailTextLabel?.text = "Не подключено"
             switchPosition = true
         } else {
-            setupView?.tableView.cellForRow(at: IndexPath(row: 1, section: 1))?.detailTextLabel?.text = setupModel[1].options[1].detailTextLabel
-            setupView?.tableView.cellForRow(at: IndexPath(row: 2, section: 1))?.detailTextLabel?.text = setupModel[1].options[2].detailTextLabel
-            setupView?.tableView.cellForRow(at: IndexPath(row: 3, section: 1))?.detailTextLabel?.text = setupModel[1].options[3].detailTextLabel
-            setupView?.tableView.cellForRow(at: IndexPath(row: 4, section: 1))?.detailTextLabel?.text = setupModel[1].options[4].detailTextLabel
-            setupView?.tableView.cellForRow(at: IndexPath(row: 5, section: 1))?.detailTextLabel?.text =  setupModel[1].options[5].detailTextLabel
+            setupView?.tableView.cellForRow(at: IndexPath(row: 1, section: 1))?.detailTextLabel?.text = SetupViewController.setupModel[1].options[1].detailTextLabel
+            setupView?.tableView.cellForRow(at: IndexPath(row: 2, section: 1))?.detailTextLabel?.text = SetupViewController.setupModel[1].options[2].detailTextLabel
+            setupView?.tableView.cellForRow(at: IndexPath(row: 3, section: 1))?.detailTextLabel?.text = SetupViewController.setupModel[1].options[3].detailTextLabel
+            setupView?.tableView.cellForRow(at: IndexPath(row: 4, section: 1))?.detailTextLabel?.text = SetupViewController.setupModel[1].options[4].detailTextLabel
+            setupView?.tableView.cellForRow(at: IndexPath(row: 5, section: 1))?.detailTextLabel?.text =  SetupViewController.setupModel[1].options[5].detailTextLabel
             switchPosition = false
         }
     }

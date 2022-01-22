@@ -9,7 +9,7 @@ import UIKit
 
 class SetupViewController: UIViewController {
     
-    var setupModel = Section.getData()
+    static var setupModel = Section.getData()
     var switchPosition = false
     
     var setupView: SetupView? {
@@ -31,7 +31,10 @@ class SetupViewController: UIViewController {
         setupView?.tableView.delegate = self
     }
 
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupView?.tableView.reloadData()
+    }
 }
 
 
