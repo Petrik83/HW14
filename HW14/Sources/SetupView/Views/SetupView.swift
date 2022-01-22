@@ -16,8 +16,6 @@ class SetupView: UIView {
         return tableView
     }()
     
-    
-    
     init() {
         super.init(frame: .zero)
         backgroundColor = .systemGray6

@@ -61,7 +61,6 @@ extension WiFiViewController: UITableViewDataSource {
     }
     
     @objc func switchChanged(_ sender : UISwitch!) {
-        
         if sender.isOn {
             WiFiViewController.wiFiSettingsData = WiFiViewController.wiFiOnSettingsData
             if SetupViewController.setupModel[safe: 1]?.options[safe: 1]?.detailTextLabel != nil {

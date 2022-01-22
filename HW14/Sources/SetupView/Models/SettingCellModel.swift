@@ -7,8 +7,6 @@
 
 import UIKit
 
-//var settingModel = Section.getData()
-
 struct Section {
     let title: String
     var options: [CellModel]

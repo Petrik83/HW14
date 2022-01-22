@@ -35,8 +35,6 @@ extension WiFiViewController: UITableViewDelegate {
                     SetupViewController.setupModel[1].options[1].detailTextLabel = temp.title
                 }
             }
-            
-            
         }
     }
 }

@@ -19,7 +19,6 @@ struct CellModel {
     enum CellStyle {
         case subtitle, value1, value2, `default`
     }
-    
     let icon: UIImage?
     let title: String
     let style: CellStyle

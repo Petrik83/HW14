@@ -22,12 +22,6 @@ class WiFiViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .never
         title = "Wi-Fi"
         view = WiFiView()
-        
-        if let wiFiSwitch = SetupViewController.setupModel[safe: 1]?.options[safe: 1]?.detailTextLabel {
-            if wiFiSwitch  == "Вкл." {
-                WiFiViewController.wiFiSettingsData = WiFiViewController.wiFiOnSettingsData
-            }
-        }
         wiFiView?.wiFitableView.dataSource = self
         wiFiView?.wiFitableView.delegate = self
     }

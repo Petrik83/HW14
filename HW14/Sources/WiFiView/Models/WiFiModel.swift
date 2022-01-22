@@ -20,6 +20,7 @@ extension Section {
             ])
         ]
     }
+    
     static func getWiFiData() -> [Section] {
         return [
             Section(title: "", options: [

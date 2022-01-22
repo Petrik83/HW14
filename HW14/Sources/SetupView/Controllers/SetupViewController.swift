@@ -27,6 +27,18 @@ class SetupViewController: UIViewController {
         self.navigationItem.searchController = search
         view = SetupView()
         
+        if let wiFiSwitch = SetupViewController.setupModel[safe: 1]?.options[safe: 1]?.detailTextLabel {
+            if wiFiSwitch  == "Вкл." {
+                WiFiViewController.wiFiSettingsData = WiFiViewController.wiFiOnSettingsData
+            }
+        }
+        
+        if let bluetoothSwitch = SetupViewController.setupModel[safe: 1]?.options[safe: 2]?.detailTextLabel {
+            if bluetoothSwitch == "Вкл." {
+                BluetoothViewController.bluetoothSettingsData = BluetoothViewController.bluetoothOnSettingsData
+            }
+        }
+        
         setupView?.tableView.dataSource = self
         setupView?.tableView.delegate = self
     }

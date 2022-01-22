@@ -12,8 +12,8 @@ extension SetupViewController: UITableViewDelegate {
         switch [indexPath.section, indexPath.row] {
         case [1, 1]:
             navigationController?.pushViewController(WiFiViewController(), animated: true)
-//        case [1, 2]:
-//            navigationController?.pushViewController(BluetothSettingsViewController(), animated: true)
+        case [1, 2]:
+            navigationController?.pushViewController(BluetoothViewController(), animated: true)
         default:
             print("Нажата клавиша \(SetupViewController.setupModel[indexPath.section].options[indexPath.row].title)")
         }
